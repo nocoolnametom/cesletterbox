@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "rules": {
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1
+  },
+  "plugins": [
+    "flow-vars"
+  ],
+  "settings": {
+    "ecmascript": 6
+  },
+  "env": {
+    "node": true,
+    "browser": false
+  }
+}
