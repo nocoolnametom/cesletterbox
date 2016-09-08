@@ -1,0 +1,28 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.floatRight {
+  float: right;
+}
+
+.preventFlicker {
+  display: none;
+}
+
+.centered {
+  margin: 0 auto;
+  width: 215px;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  color: #333333;
+}

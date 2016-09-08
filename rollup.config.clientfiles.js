@@ -7,6 +7,7 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
 import simplevars from 'postcss-simple-vars';
+import colorFunction from 'postcss-color-function';
 import nested from 'postcss-nested';
 import cssnext from 'postcss-cssnext';
 import uglify from 'rollup-plugin-uglify';
@@ -29,6 +30,7 @@ export default (pageName, externals) => ({
         cssnext({
           warnForDuplicates: false,
         }),
+        colorFunction(),
         cssnano(),
       ],
       extensions: ['.css'],

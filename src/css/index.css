@@ -1,6 +1,92 @@
-.testClass {
-  display: none;
-  &:hover {
-    display: block;
+main {
+  max-width: 960px;
+  width: 95%;
+  margin: 0 auto;
+
+  h1 {
+    margin: 20px 0;
+  }
+
+  a {
+    color: #0091bc;
+    text-decoration: none;
+  }
+
+  svg.happy {
+    height: 48px;
+    width: 48px;
+    background-color: lightgray;
+    padding: 15px;
+    margin-left: 10px;
+    border-radius: 100px;
+    .rightEar {
+      fill: #FFEBFA;
+    }
+    .leftEar {
+      fill: #FFEBFA;
+    }
+    .face {
+      fill: #FFEBFA;
+    }
+    .bottomLeftHair {
+      fill: #BF5B40;
+    }
+    .bottomRightHair {
+      fill: #BF5B40;
+    }
+    .topHair{
+      fill: #BF5B40;
+    }
+    .faceOutline {
+      fill: #333333;
+    }
+    .rightEye {
+      fill: #333333;
+    }
+    .mouth {
+      fill: #333333;
+    }
+    .leftEye {
+      fill: #333333;
+    }
+  }
+
+  svg.radio {
+    height: 48px;
+    width: 48px;
+    padding: 18px 24px 0 12px;
+  }
+
+  svg.network {
+    height: 48px;
+    width: 48px;
+    padding: 0px 24px 0 12px;
+    path {}
+  }
+
+  svg.letter {
+    height: 60px;
+    width: 60px;
+    padding: 12px 20px;
+  }
+
+
+  svg.squares {
+    height: 60px;
+    width: 100%;
+    padding: 12px 0;
+    margin: 0 auto;
+    rect, polygon {
+      fill: #747474;
+    }
+  }
+
+  svg.layers {
+    float: left;
+    padding-top: 12px;
+    height: 75px;
+    path {
+      fill: #0091bc;
+    }
   }
 }

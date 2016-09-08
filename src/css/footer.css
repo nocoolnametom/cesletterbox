@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    font-size: smaller;
+    border-top: 1px solid #97999b;
+    background-color: #F1F1F3;
+    width: calc(100% - 4vh);
+    padding: 0 2vh 1vh;
+    p {
+      margin: 0;
+    }
+    .toTop {
+      padding: 2vh 0;
+      text-align: center;
+    }
+    a {
+      color: #333333;
+    }
+    .container {
+      margin: 0 auto;
+    }
+    small {
+      color: #97999b;
+    }
+  }
+}

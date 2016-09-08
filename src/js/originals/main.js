@@ -11,9 +11,13 @@ function shoutboxError() {
 }
 
 function refreshShoutbox() {
-  getAjax('/chat_content.html', data => {
-    setHtml(document.querySelector('div#shoutbox'), data);
-  }, shoutboxError);
+  const shoutbox = document.querySelector('div#shoutbox');
+
+  if (shoutbox) {
+    getAjax('/chat_content.html', data => {
+      setHtml(shoutbox, data);
+    }, shoutboxError);
+  }
 }
 
 function refreshTimeSb() {
@@ -31,7 +35,7 @@ function postShoutbox() {
     refreshShoutbox();
   }, shoutboxError);
   const messageInput: Element = document.querySelector('#shoutbox-input .message');
-  if (messageInput instanceof HTMLInputElement) {
+  if (messageInput && messageInput instanceof HTMLInputElement) {
     messageInput.value = '';
   }
 }
@@ -44,14 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // get forban
-  getAjax('/forban_link.html', data => {
-    setHtml(document.querySelector('div#forban_link'), data);
-  });
+  const forbanLink = document.querySelector('div#forban_link');
+  if (forbanLink) {
+    getAjax('/forban_link.html', data => {
+      setHtml(forbanLink, data);
+    });
+  }
 
   // get station counter
-  getAjax('/station_cnt.txt', data => {
-    setHtml(document.querySelector('div#station'), data);
-  });
+  const stationCount = document.querySelector('div#station');
+  if (stationCount) {
+    getAjax('/station_cnt.txt', data => {
+      setHtml(stationCount, data);
+    });
+  }
 
   // submits new text to ShoutBox
   addEvent(document.querySelector('#sb_form'), 'submit', event => {
