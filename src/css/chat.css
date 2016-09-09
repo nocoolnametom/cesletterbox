@@ -8,4 +8,108 @@ main {
     color: #0091bc;
     text-decoration: none;
   }
+
+  .shoutbox_content {
+    max-height: 60vh;
+    overflow: scroll;
+
+    border: 1px solid #cccccc;
+
+    &:empty {
+      border: 0;
+      &:after {
+        content: 'Chat is currently empty.';
+      }
+    }
+
+    .message {
+      padding-left: 20px;
+      /*display: flex;
+      align-items: center;
+      justify-content: center;*/
+
+      .def {
+        color: black;
+      }
+
+      .blue {
+        color: blue;
+      }
+
+      .green {
+        color: green;
+      }
+
+      .orange {
+        color: orange;
+      }
+
+      .red {
+        color: red;
+      }
+
+      date, name, data {
+        /*flex: 1;
+        align-self: flex-start;*/
+      }
+
+      date {
+        float: left;
+        color: #999999;
+        width: 60px;
+        transform: translateX(-20px);
+      }
+
+      name {
+        float: left;
+        transform: translateX(-10px);
+      }
+    }
+  }
+
+  .label-body label {
+    width: 3em;
+
+    &.bg-black {
+      background-color: black;
+      color: black;
+    }
+
+    &.bg-blue {
+      background-color: blue;
+      color: blue;
+    }
+
+    &.bg-green {
+      background-color: green;
+      color: green;
+    }
+
+    &.bg-orange {
+      background-color: orange;
+      color: orange;
+    }
+
+    &.bg-red {
+      background-color: red;
+      color: red;
+    }
+  }
+  
+
+  .textColor + .label-body {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s;
+  }
+
+  .textColor:hover + .label-body,
+  .textColor:focus + .label-body,
+  .textColor:active + .label-body,
+  .label-body:focus,
+  .label-body:hover,
+  .label-body:active {
+    max-height: 100px;
+  }
+  
 }

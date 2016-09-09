@@ -42,7 +42,7 @@
   <!--
     #sb_form = Form for submitting POST requests with a new message 
     #shoutbox = Presence causes config lookup, populated with HTML of chat log or error message
-    #shoutbox-input .message = Message input, cleared after submission 
+    #shoutbox-input .messageInput = Message input, cleared after submission 
     #chatcontainer = hidden if config has turned off chat
   -->
 
@@ -53,7 +53,7 @@
       anonymous and not saved.  Also, all chats are unmoderated, though we encourage everyone to
       be polite!
     </p>
-      
+
     <p>
       Please be aware that there may be individuals who are talking about things that may make
       you uncomfortable, but just as they are free to speak so too all of us are free to choose
@@ -64,25 +64,25 @@
     <div id="chatcontainer">
       <h3>Chat</h3>
       <div id="chat" class="card last">
-        <form method="POST" name="psowrte" id="sb_form" >
+        <form method="POST" name="psowrte" id="sb_form">
           <div id="shoutbox-options">
-            <label>Text Color:</label>
+            <label class="textColor">Text Color</label>
             <div class="label-body">
               <ul class="listInline pr">
                 <li>
-                  <label for="def" class="bg-black"><input name="color" type="radio" value="def" id="def" checked>Default</label>
+                  <label for="def" class="bg-black"><input name="color" type="radio" value="def" id="def" checked></label>
                 </li>
                 <li>
-                  <label for="blue" class="bg-blue"><input name="color" type="radio" value="blue" id="blue">Blue</label>
+                  <label for="blue" class="bg-blue"><input name="color" type="radio" value="blue" id="blue"></label>
                 </li>
                 <li>
-                  <label for="green" class="bg-green"><input name="color" type="radio" value="green" id="green">Green</label>
+                  <label for="green" class="bg-green"><input name="color" type="radio" value="green" id="green"></label>
                 </li>
                 <li>
-                  <label for="orange" class="bg-orange"><input name="color" type="radio" value="orange" id="orange">Orange</label>
+                  <label for="orange" class="bg-orange"><input name="color" type="radio" value="orange" id="orange"></label>
                 </li>
                 <li>
-                  <label for="red" class="bg-red"><input name="color" type="radio" value="red" id="red">Red</label>
+                  <label for="red" class="bg-red"><input name="color" type="radio" value="red" id="red"></label>
                 </li>
               </ul>
             </div>
@@ -94,12 +94,13 @@
             </div>
             <div class="eight columns bottom">
               <label for="messageInput">Message</label>
-              <input id="messageInput" style="width: calc(100% - 105px);" class="message" type="text" name="data" placeholder="Message...">
+              <input id="messageInput" style="width: calc(100% - 105px);" class="messageInput" type="text" name="data" placeholder="Message...">
               <button class="button button-primary u-pull-right" type="submit" name="submit">Send</button>
             </div>
           </div>
         </form>
         <div id="shoutbox" class="shoutbox_content"></div>
+        <div class="pb"></div>
       </div>
     </div>
   </main>

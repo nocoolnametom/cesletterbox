@@ -2,6 +2,11 @@
 import getAjax from '../utils/getAjax';
 import setHtml from '../utils/setHtml';
 
+/* example of dl_statistics_display
+
+[]
+*/
+
 const filesTop = document.querySelector('p#files-top-statspage');
 
 if (filesTop) {

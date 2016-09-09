@@ -23,6 +23,14 @@ header {
   }
 }
 
+.pt {
+  padding-top: 2rem;
+}
+
+.pb {
+  padding-bottom: 2rem;
+}
+
 ul.listInline
 {
   margin: 0;

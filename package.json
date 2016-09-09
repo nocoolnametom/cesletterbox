@@ -14,7 +14,7 @@
     "rollup-index": "rollup --config config/rollup.config.index.js",
     "rollup-index-watch": "rollup -w --config config/rollup.config.index.js",
     "css": "postcss -c config/postcss.json src/css/*.css",
-    "css-watch": "postcss -w -c config/postcss.json src/css/*.css",
+    "css-watch": "postcss -w --map file -c config/postcss.json src/css/*.css",
     "html": "cpx './src/html/**/*.html' dist -c 'html-minifier --remove-comments --remove-tag-whitespace --collapse-whitespace'",
     "html-watch": "cpx './src/html/**/*.html' dist --watch -c 'html-minifier --remove-comments --remove-tag-whitespace --collapse-whitespace'",
     "images": "cpx './src/**/*.{gif,jpeg,png,jpg,svg}' dist",

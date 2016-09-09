@@ -45,14 +45,6 @@ main {
     }
   } 
 
-  .pt {
-    padding-top: 2rem;
-  }
-
-  .pb {
-    padding-bottom: 2rem;
-  }
-
   svg.radio {
     height: 48px;
     width: 48px;
