@@ -1,0 +1,19 @@
+{
+    "use": [
+        "postcss-import",
+        "postcss-simple-vars",
+        "postcss-nested",
+        "postcss-cssnext",
+        "postcss-color-function",
+        "cssnano"
+    ],
+    "dir": "./dist/css/",
+    "postcss-import": {},
+    "postcss-simple-vars": {},
+    "postcss-nested": {},
+    "postcss-cssnext": {
+        "warnForDuplicates": false
+    },
+    "postcss-color-function": {},
+    "cssnano": {}
+}

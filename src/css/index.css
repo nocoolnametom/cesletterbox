@@ -1,12 +1,4 @@
 main {
-  max-width: 960px;
-  width: 95%;
-  margin: 0 auto;
-
-  h1 {
-    margin: 20px 0;
-  }
-
   a {
     color: #0091bc;
     text-decoration: none;
@@ -78,15 +70,6 @@ main {
     margin: 0 auto;
     rect, polygon {
       fill: #747474;
-    }
-  }
-
-  svg.layers {
-    float: left;
-    padding-top: 12px;
-    height: 75px;
-    path {
-      fill: #0091bc;
     }
   }
 }
