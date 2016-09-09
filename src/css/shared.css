@@ -1,46 +1,17 @@
 @import "partials/navbar.css";
 @import "partials/footer.css";
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.floatLeft {
-  float: left;
-}
-
-.floatRight {
-  float: right;
-}
-
-.preventFlicker {
-  display: none;
-}
+@import "partials/skeleton.css";
 
 .centered {
   margin: 0 auto;
-  width: 215px;
+  display: table;
 }
 
 body {
   margin: 0;
-  font-family: "Open Sans";
-  color: #333333;
-}
-
-main {
-  max-width: 960px;
-  width: 95%;
-  margin: 0 auto;
 }
 
 header {
-  max-width: 960px;
-  width: 95%;
-  margin: 0 auto;
-
   h1 {
     margin: 20px 0;
   }
@@ -49,5 +20,23 @@ header {
     float: left;
     padding-top: 12px;
     height: 75px;
+  }
+}
+
+ul.listInline
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li
+  {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+  &.pr li {
+    padding-right: 10px;
   }
 }

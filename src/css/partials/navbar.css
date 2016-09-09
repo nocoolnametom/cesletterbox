@@ -15,143 +15,162 @@ body {
 }
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } /* needed for checkbox hack */
 
+#nav + * {
+  margin-top: 51px;
+
+  @media(min-width:$flex_nav_breakpoint){
+    margin-top: 54px;
+  }
+}
 
 #nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  max-height: 100vh;
+  overflow: auto;
+  z-index: 5;
 
-  & > ul {
-    border-top: 1px solid flex_nav_borderColor;
-  }
-  
-  ul {
-    display: none;
-    width: 100%;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    
-    li {
-      a {
-        display: block;
-        padding: 1em;
-        background: $secondaryColor;
-        border-right: 1px solid $flex_nav_borderColor;
-        color: $flex_nav_linkColor;
-        text-decoration: none;
-
-        &:hover {
-          background: $flex_nav_hoverColor;
-        }
-      }
-
-      &:last-of-type {
-        a {
-          border-right: 0px;
-        }
-      }
-
-      /* 2nd level */
-      ul {
-        li {
-          a {
-            padding-left: 1.5em;
-          }
-          ul {
-            li {
-              a {
-                padding-left: 3.125em;
-              }
-            }
-          }
-        }
-      }
-
-    }
-    
-  }
-  
-  input.trigger {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-
-    &:checked ~ ul, &:checked ~ ul li ul {
-      display: block !important;
-
-      @media (min-width:$flex_nav_breakpoint){
-        display: flex;
-        flex-direction: row;
-      }
-    }
-  }
-
-  label {
-    position:relative;
-    display:block;
-    min-height:2em;
-    padding:.45em;
-    font-size:1.1em;
-    margin:0;
-    cursor:pointer;
-    background:$secondaryColor;
-    line-height: 2em;
-    color: color($primaryColor lightness(80%));
-  }
-    
-  label:after {
-    position: absolute;
-    right: 1em;  
-    top: .2em; 
-    content:"\2261";
-    font-size:1.8em;
-    color:$flex_nav_hotdogsColor;
-  }
-  
   @media(min-width:$flex_nav_breakpoint){
+    overflow: visible;
+  }
+
+  .nav {
+    position: relative;
+
+    & > ul {
+      border-top: 1px solid flex_nav_borderColor;
+    }
+    
     ul {
-      -webkit-box-orient: horizontal;
-      -moz-box-orient: horizontal;
-      box-orient: horizontal;
-      display: flex;
-      flex-direction: row;
+      display: none;
+      width: 100%;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
       
       li {
-        position:relative;
-        text-align: center;
-        flex: 1;
+        a {
+          display: block;
+          padding: 1em;
+          background: $secondaryColor;
+          border-right: 1px solid $flex_nav_borderColor;
+          color: $flex_nav_linkColor;
+          text-decoration: none;
 
+          &:hover {
+            background: $flex_nav_hoverColor;
+          }
+        }
+
+        &:last-of-type {
+          a {
+            border-right: 0px;
+          }
+        }
+
+        /* 2nd level */
         ul {
-          display:none !important;
-          position:absolute;
-          top:3.0625em;
-          left:0;
-          display:block;
-          width:$flex_nav_subNavWidth;
-          z-index:200;
-
           li {
-            text-align:left;
+            a {
+              padding-left: 1.5em;
+            }
             ul {
-              z-index: 300;
-              top:0px;
-              left: calc($flex_nav_subNavWidth - .1);
               li {
                 a {
-                  padding-left:30px !important;
+                  padding-left: 3.125em;
                 }
               }
             }
           }
         }
 
-        &:hover > ul {
-          display: block !important;
-        }
-
-      } 
+      }
+      
     }
+    
+    input.trigger {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+
+      &:checked ~ ul, &:checked ~ ul li ul {
+        display: block !important;
+
+        @media (min-width:$flex_nav_breakpoint){
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+
     label {
-      display:none;
+      position:relative;
+      display:block;
+      min-height:2em;
+      padding:.45em;
+      font-size:1.1em;
+      margin:0;
+      cursor:pointer;
+      background:$secondaryColor;
+      line-height: 2em;
+      color: color($primaryColor lightness(80%));
+    }
+      
+    label:after {
+      position: absolute;
+      right: 1em;  
+      top: .2em; 
+      content:"\2261";
+      font-size:1.8em;
+      color:$flex_nav_hotdogsColor;
+    }
+    
+    @media(min-width:$flex_nav_breakpoint){
+      ul {
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        box-orient: horizontal;
+        display: flex;
+        flex-direction: row;
+        
+        li {
+          position:relative;
+          text-align: center;
+          flex: 1;
+
+          ul {
+            display:none !important;
+            position:absolute;
+            top:3.0625em;
+            left:0;
+            display:block;
+            width:$flex_nav_subNavWidth;
+            z-index:200;
+
+            li {
+              text-align:left;
+              ul {
+                z-index: 300;
+                top:0px;
+                left: calc($flex_nav_subNavWidth - .1);
+                li {
+                  a {
+                    padding-left:30px !important;
+                  }
+                }
+              }
+            }
+          }
+
+          &:hover > ul {
+            display: block !important;
+          }
+
+        } 
+      }
+      label {
+        display:none;
+      }
     }
   }
 }

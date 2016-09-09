@@ -15,10 +15,9 @@ body {
     padding: 0 2vh 1vh;
     p {
       margin: 0;
-    }
-    .toTop {
-      padding: 2vh 0;
-      text-align: center;
+      &:first-child {
+        padding-top: 2vh
+      }
     }
     a {
       color: #333333;

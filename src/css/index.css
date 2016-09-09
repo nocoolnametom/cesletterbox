@@ -1,3 +1,5 @@
+@import "partials/skeleton_media.css";
+
 main {
   a {
     color: #0091bc;
@@ -41,32 +43,34 @@ main {
     .leftEye {
       fill: #333333;
     }
+  } 
+
+  .pt {
+    padding-top: 2rem;
+  }
+
+  .pb {
+    padding-bottom: 2rem;
   }
 
   svg.radio {
     height: 48px;
     width: 48px;
-    padding: 18px 24px 0 12px;
   }
 
   svg.network {
     height: 48px;
     width: 48px;
-    padding: 0px 24px 0 12px;
-    path {}
   }
 
   svg.letter {
     height: 60px;
     width: 60px;
-    padding: 12px 20px;
   }
-
 
   svg.squares {
     height: 60px;
     width: 100%;
-    padding: 12px 0;
     margin: 0 auto;
     rect, polygon {
       fill: #747474;

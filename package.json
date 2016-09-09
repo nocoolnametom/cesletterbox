@@ -5,8 +5,10 @@
   "main": "dist/index.html",
   "scripts": {
     "build": "NODE_ENV=production npm run js && npm run html && npm run css && npm run images",
-    "js": "npm-run-all --parallel rollup-chat rollup-index",
-    "js-watch": "npm-run-all --parallel rollup-chat-watch rollup-index-watch",
+    "js": "npm-run-all --parallel rollup-about rollup-chat rollup-index",
+    "js-watch": "npm-run-all --parallel rollup-about-watch rollup-chat-watch rollup-index-watch",
+    "rollup-about": "rollup --config config/rollup.config.about.js",
+    "rollup-about-watch": "rollup -w --config config/rollup.config.about.js",
     "rollup-chat": "rollup --config config/rollup.config.chat.js",
     "rollup-chat-watch": "rollup -w --config config/rollup.config.chat.js",
     "rollup-index": "rollup --config config/rollup.config.index.js",
