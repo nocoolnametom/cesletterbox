@@ -15,11 +15,13 @@ body {
 }
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} } /* needed for checkbox hack */
 
-#nav + * {
-  margin-top: 51px;
+#nav + *:before {
+  margin-top: 55px;
+  display: block;
+  content: ' ';
 
   @media(min-width:$flex_nav_breakpoint){
-    margin-top: 54px;
+    margin-top: 60px;
   }
 }
 
@@ -29,9 +31,15 @@ body {
   max-height: 100vh;
   overflow: auto;
   z-index: 5;
+  top: 0;
+  left: 0;
 
   @media(min-width:$flex_nav_breakpoint){
     overflow: visible;
+  }
+
+  @media print {
+    display: none;
   }
 
   .nav {

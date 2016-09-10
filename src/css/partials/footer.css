@@ -7,7 +7,7 @@ body {
     flex: 1;
   }
 
-  footer {
+  footer#footer {
     font-size: smaller;
     border-top: 1px solid #97999b;
     background-color: #F1F1F3;

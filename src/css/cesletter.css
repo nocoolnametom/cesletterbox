@@ -1,0 +1,14 @@
+@import "partials/navbar.css";
+@import "partials/footer.css";
+@import "partials/cesletter_import.css";
+
+footer#footer {
+  width: 100% !important;
+  margin-bottom: -40px;
+}
+
+#nav {
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "HelveticaNeue", "Helvetica Neue", "Open Sans", Helvetica, Arial, sans-serif;
+}
