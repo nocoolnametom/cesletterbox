@@ -7,7 +7,7 @@ const visitCount = document.querySelector('p#visitors-top-statspage');
 
 if (visitCount) {
   getAjax('/vc_display.php?sortBy=day&output_type=json&top_max=10', data => {
-    let tblBody = '<ul style="list-style: none; -webkit-padding-start:0px;">';
+    let tblBody = '<ul class="noDot">';
     data.forEach(item => {
       let tblRow = '';
       tblRow += `<span class="sp-visitors-date">${item.day} → </span>`;

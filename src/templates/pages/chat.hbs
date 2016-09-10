@@ -1,0 +1,55 @@
+<p>
+  Hi!  On this page you can chat with others conntected to the CES LetterBox.  All chats are
+  anonymous and not saved.  Also, all chats are unmoderated, though we encourage everyone to
+  be polite!
+</p>
+
+<p>
+  Please be aware that there may be individuals who are talking about things that may make
+  you uncomfortable, but just as they are free to speak so too all of us are free to choose
+  whether or not to participate.  If someone says something that you choose to feel offended
+  by the best course of action is to always take the higher road and disengage.
+</p>
+
+<div id="chatcontainer">
+  <h3>Chat</h3>
+  <div id="chat" class="card last">
+    <form method="POST" name="psowrte" id="sb_form">
+      <div id="shoutbox-options">
+        <label class="textColor">Text Color</label>
+        <div class="label-body">
+          <ul class="listInline pr">
+            <li>
+              <label for="def" class="bg-black"><input name="color" type="radio" value="def" id="def" checked></label>
+            </li>
+            <li>
+              <label for="blue" class="bg-blue"><input name="color" type="radio" value="blue" id="blue"></label>
+            </li>
+            <li>
+              <label for="green" class="bg-green"><input name="color" type="radio" value="green" id="green"></label>
+            </li>
+            <li>
+              <label for="orange" class="bg-orange"><input name="color" type="radio" value="orange" id="orange"></label>
+            </li>
+            <li>
+              <label for="red" class="bg-red"><input name="color" type="radio" value="red" id="red"></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="shoutbox-input" class="row">
+        <div class="four columns bottom">
+          <label for="nicknameInput">Nickname</label>
+          <input id="nicknameInput" class="nickname u-full-width" type="text" name="name" value="Anonymous" required autocomplete="off">
+        </div>
+        <div class="eight columns bottom">
+          <label for="messageInput">Message</label>
+          <input id="messageInput" style="width: calc(100% - 105px);" class="messageInput" type="text" name="data" placeholder="Message..." required autocomplete="off">
+          <button class="button button-primary u-pull-right" type="submit" name="submit">Send</button>
+        </div>
+      </div>
+    </form>
+    <div id="shoutbox" class="shoutbox_content"></div>
+    <div class="pb"></div>
+  </div>
+</div>

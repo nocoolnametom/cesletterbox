@@ -11,6 +11,11 @@ body {
   margin: 0;
 }
 
+.vc_count {
+  height: 0px;
+  overflow: hidden;
+}
+
 header {
   h1 {
     margin: 20px 0;

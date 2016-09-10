@@ -1,0 +1,13 @@
+main {
+  margin-top: 20px;
+
+  a {
+    color: #0091bc;
+    text-decoration: none;
+  }
+
+  ul.noDot {
+      list-style: none;
+      -webkit-padding-start: 0px;
+  }
+}

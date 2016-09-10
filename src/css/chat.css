@@ -24,9 +24,6 @@ main {
 
     .message {
       padding-left: 20px;
-      /*display: flex;
-      align-items: center;
-      justify-content: center;*/
 
       .def {
         color: black;
@@ -46,11 +43,6 @@ main {
 
       .red {
         color: red;
-      }
-
-      date, name, data {
-        /*flex: 1;
-        align-self: flex-start;*/
       }
 
       date {

@@ -18,7 +18,13 @@ example of config.json:
 export default function initializeShoutbox() {
   addEvent(document.querySelector('#sb_form'), 'submit', event => {
     event.preventDefault();
-    postShoutbox();
+    const nInput = document.querySelector('#nicknameInput');
+    const mInput = document.querySelector('#messageInput');
+    const nickname = nInput.value || '';
+    const message = mInput.value || '';
+    if (nickname && message) {
+      postShoutbox();
+    }
   });
 
   const shoutbox = document.querySelector('div#shoutbox');

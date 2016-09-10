@@ -4,21 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
   <meta http-equiv="cache-control" content="no-cache">
-  <title>{{header}}</title>
+  <title>{{{header}}}</title>
   <link rel="stylesheet" href="css/shared.css">
-  <link rel="stylesheet" href="css/{{page}}.css">
+  <link rel="stylesheet" href="css/{{{page}}}.css">
 </head>
 <body>
-  {{navbarTemplate}}
+  <span id="vc_count"></span>
+  {{{navbarTemplate}}}
 
-  {{headerTemplate}}
+  {{{headerTemplate}}}
 
-  <main>
-    {{content}}
+  <main class="container">
+    {{{content}}}
   </main>
 
-  {{footerTemplate}}
+  {{{footerTemplate}}}
 
-  <script src="js/{{page}}.js"></script>
+  <script src="js/{{{page}}}.js"></script>
 </body>
 </html>
