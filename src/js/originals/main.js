@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // get forban
   const forbanLink = document.querySelector('div#forban_link');
   if (forbanLink) {
-    getAjax('/forban_link.html', data => {
+    getAjax('/forban_link.html', (data: string) => {
       setHtml(forbanLink, data);
     });
   }
@@ -14,10 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // get station counter
   const stationCount = document.querySelector('div#station');
   if (stationCount) {
-    getAjax('/station_cnt.txt', data => {
+    getAjax('/station_cnt.txt', (data: string) => {
       setHtml(stationCount, data);
     });
   }
 });
-
-

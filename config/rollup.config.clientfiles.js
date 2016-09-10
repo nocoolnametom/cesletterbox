@@ -4,12 +4,6 @@ import babel from 'rollup-plugin-babel';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
-import postcss from 'rollup-plugin-postcss';
-import cssnano from 'cssnano';
-import simplevars from 'postcss-simple-vars';
-import colorFunction from 'postcss-color-function';
-import nested from 'postcss-nested';
-import cssnext from 'postcss-cssnext';
 import uglify from 'rollup-plugin-uglify';
 import replace from 'rollup-plugin-replace';
 
@@ -22,18 +16,6 @@ export default (pageName, externals) => ({
     json(),
     replace({
       ENV: JSON.stringify(currentEnvironment),
-    }),
-    postcss({
-      plugins: [
-        simplevars(),
-        nested(),
-        cssnext({
-          warnForDuplicates: false,
-        }),
-        colorFunction(),
-        cssnano(),
-      ],
-      extensions: ['.css'],
     }),
     babel(),
     commonjs(),

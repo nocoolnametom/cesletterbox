@@ -1,5 +1,5 @@
 /* @flow */
-export default function parseDate(dateParam: string) {
+export default function parseDate(dateParam: string): Date {
   const date = new Date();
   const parts = String(dateParam).split(/[- :]/);
 

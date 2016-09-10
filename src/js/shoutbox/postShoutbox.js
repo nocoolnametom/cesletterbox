@@ -21,7 +21,7 @@ export default function postShoutbox() {
   postAjax(
     '/cgi-bin/psowrte.py',
     serialize(document.querySelector('#sb_form')),
-    () => refreshShoutbox(),
+    refreshShoutbox,
     shoutboxError
   );
   const messageInput: Element = document.querySelector('#shoutbox-input .messageInput');

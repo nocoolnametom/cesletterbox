@@ -16,7 +16,7 @@ example of config.json:
 */
 
 export default function initializeShoutbox() {
-  addEvent(document.querySelector('#sb_form'), 'submit', event => {
+  addEvent(document.querySelector('#sb_form'), 'submit', (event: Event) => {
     event.preventDefault();
     const nInput = document.querySelector('#nicknameInput');
     const mInput = document.querySelector('#messageInput');
@@ -30,7 +30,7 @@ export default function initializeShoutbox() {
   const shoutbox = document.querySelector('div#shoutbox');
 
   if (shoutbox) {
-    getAjax('/config.json', json => {
+    getAjax('/config.json', (json: string) => {
       let data;
       try {
         data = JSON.parse(json);

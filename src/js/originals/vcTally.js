@@ -9,12 +9,14 @@ example of vc_counter
 
 */
 
+type CounterType = Array<string>;
+
 const unixTimestamp = Math.round(new Date().getTime() / 1000);
 
 const visitCount = document.querySelector('span#vc_count');
 
 if (visitCount) {
-  getAjax(`/vc_counter.php?client_date=${unixTimestamp}`, data => {
+  getAjax(`/vc_counter.php?client_date=${unixTimestamp}`, (data: CounterType) => {
     console.log(data);
     const vcBody = '';
     setHtml(visitCount, vcBody);
